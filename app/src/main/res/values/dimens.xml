@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dimes for design 3-->
+    <dimen name="headerTextSize">22sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+
+    <dimen name="signup_text_margin_top">10dp</dimen>
+
+    <dimen name="widget_size_normal">56dp</dimen>
+    <dimen name="widget_margin_normal">16dp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

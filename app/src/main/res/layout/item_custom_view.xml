@@ -1,76 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingTop="5dp"
+    android:layout_height="110dp"
     android:paddingBottom="5dp"
     android:paddingRight="5dp"
-    android:background="@color/white">
+    android:backgroundTint="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/journalContent"
+        android:orientation="horizontal">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:backgroundTint="@color/white"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:id="@+id/ascentColor"
-                android:background="@color/orange"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/date"/>
+    <LinearLayout
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:text="Wednesday, 08 Mar 2022"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/time"
+            android:layout_height="wrap_content"
+            android:layout_width="90dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:text="08:45 PM"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
             <TextView
-                android:id="@+id/date"
-                android:layout_width="60dp"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:background="@color/white"
-                android:gravity="center"
-                android:text="25    Friday 8:04 M"
-                android:textAlignment="center"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="UnknownIdInLayout" />
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:background="@color/white"
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:ellipsize="end"
+                android:maxLines="5"
                 android:text="@string/testString"
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/image"
-                app:layout_constraintStart_toEndOf="@+id/date"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAlignment="viewStart"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center|right"
+            android:background="@color/white"
+            android:src="@drawable/backiee"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[7]"/>
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="140dp"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:background="@color/white"
-                android:src="@drawable/backiee"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/backgrounds/scenic[7]" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
